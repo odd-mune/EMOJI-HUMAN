@@ -401,3 +401,29 @@ footer .footer-below {
   background-color: #233140;
 }
 /* 내비 */
+
+
+
+
+
+
+/* 그라디언트 배경 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 200vh;
+  padding: 1rem;
+  font-family: Avenir, sans-serif;
+  font-size: 112.5%;
+  color: #124;
+  background-image: radial-gradient(rgba(255, 185, 65, 0.7), rgba(255, 0, 0, 0) 40vw), radial-gradient(rgba(255, 186, 186, 0.7), rgba(0, 128, 0, 0) 40vw), radial-gradient(rgba(114, 215, 52, 0.7), rgba(0, 0, 255, 0) 40vw), radial-gradient(rgba(255, 255, 0, 0.7), rgba(255, 255, 0, 0) 40vw), radial-gradient(rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0) 40vw);
+  background-position: -30vw 7rem, 50% 10rem, 60vw 14rem, -10vw calc(14rem + 20vw), 30vw calc(14rem + 20vw);
+  background-size: 80vw 80vw;
+  background-repeat: no-repeat;
+}
+/* 그라디언트 배경 */

@@ -1,0 +1,59 @@
+body{
+  display:flex;
+  align-items:center;
+  font-family:sans-serif;
+  flex-direction:column;
+  height:100vh;
+  font-size:6rem;
+  -webkit-text-stroke: 1px white;
+  -webkit-text-fill-color: black;
+  -webkit-animation: fill 0.5s infinite alternate;
+  background:black;
+  width:100vw;
+  overflow-x:hidden;
+  justify-content:center;
+}
+
+.l{
+  width:fit-content;
+  white-space:nowrap;
+  animation: example 10s linear 0.5s infinite;
+}
+.r{
+  width:fit-content;
+  white-space:nowrap;
+  animation: example2 10s linear 0.5s infinite;
+}
+
+@keyframes example2 {
+  0% {      
+    margin-right:0%;
+    opacity:0%;
+ }
+  10%{
+    opacity:100%;
+  }
+  90%{
+    opacity:100%;
+  }
+  100% {
+    margin-right:-100%;
+    opacity:0%;
+ }
+}
+@keyframes example {
+  0% {      
+    margin-left:0%;
+    opacity:0%;
+ }
+  10%{
+    opacity:100%;
+  }
+  90%{
+    opacity:100%;
+  }
+  100% {
+    margin-left:-100%;
+    opacity:0%;
+ }
+}
