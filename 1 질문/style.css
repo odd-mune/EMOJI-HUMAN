@@ -1,0 +1,610 @@
+.chat-thread > *:nth-child(1).message-reply + .message,
+.chat-thread > * > .message:nth-child(1).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(1):not(.message-reply),
+.chat-thread > * > .message:nth-child(1):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.chat-thread > *:nth-child(1) p,
+.chat-thread > * > .message:nth-child(1) p {
+  margin: 0;
+  animation: 3.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(1) .typing-indicator,
+.chat-thread > * > .message:nth-child(1) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 3s forwards;
+}
+.chat-thread > *:nth-child(1) .typing-indicator span,
+.chat-thread > * > .message:nth-child(1) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(1) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(1) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(1) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(1) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(1) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(1) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(2).message-reply + .message,
+.chat-thread > * > .message:nth-child(2).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(2):not(.message-reply),
+.chat-thread > * > .message:nth-child(2):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+}
+.chat-thread > *:nth-child(2) p,
+.chat-thread > * > .message:nth-child(2) p {
+  margin: 0;
+  animation: 4.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(2) .typing-indicator,
+.chat-thread > * > .message:nth-child(2) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 4s forwards;
+}
+.chat-thread > *:nth-child(2) .typing-indicator span,
+.chat-thread > * > .message:nth-child(2) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(2) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(2) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(2) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(2) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(2) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(2) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(3).message-reply + .message,
+.chat-thread > * > .message:nth-child(3).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(3):not(.message-reply),
+.chat-thread > * > .message:nth-child(3):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+.chat-thread > *:nth-child(3) p,
+.chat-thread > * > .message:nth-child(3) p {
+  margin: 0;
+  animation: 5.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(3) .typing-indicator,
+.chat-thread > * > .message:nth-child(3) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 5s forwards;
+}
+.chat-thread > *:nth-child(3) .typing-indicator span,
+.chat-thread > * > .message:nth-child(3) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(3) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(3) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(3) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(3) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(3) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(3) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(4).message-reply + .message,
+.chat-thread > * > .message:nth-child(4).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(4):not(.message-reply),
+.chat-thread > * > .message:nth-child(4):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+}
+.chat-thread > *:nth-child(4) p,
+.chat-thread > * > .message:nth-child(4) p {
+  margin: 0;
+  animation: 6.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(4) .typing-indicator,
+.chat-thread > * > .message:nth-child(4) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 6s forwards;
+}
+.chat-thread > *:nth-child(4) .typing-indicator span,
+.chat-thread > * > .message:nth-child(4) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(4) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(4) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(4) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(4) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(4) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(4) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(5).message-reply + .message,
+.chat-thread > * > .message:nth-child(5).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(5):not(.message-reply),
+.chat-thread > * > .message:nth-child(5):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+}
+.chat-thread > *:nth-child(5) p,
+.chat-thread > * > .message:nth-child(5) p {
+  margin: 0;
+  animation: 7.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(5) .typing-indicator,
+.chat-thread > * > .message:nth-child(5) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 7s forwards;
+}
+.chat-thread > *:nth-child(5) .typing-indicator span,
+.chat-thread > * > .message:nth-child(5) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(5) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(5) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(5) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(5) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(5) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(5) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(6).message-reply + .message,
+.chat-thread > * > .message:nth-child(6).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(6):not(.message-reply),
+.chat-thread > * > .message:nth-child(6):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 6s;
+}
+.chat-thread > *:nth-child(6) p,
+.chat-thread > * > .message:nth-child(6) p {
+  margin: 0;
+  animation: 8.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(6) .typing-indicator,
+.chat-thread > * > .message:nth-child(6) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 8s forwards;
+}
+.chat-thread > *:nth-child(6) .typing-indicator span,
+.chat-thread > * > .message:nth-child(6) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(6) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(6) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(6) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(6) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(6) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(6) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(7).message-reply + .message,
+.chat-thread > * > .message:nth-child(7).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(7):not(.message-reply),
+.chat-thread > * > .message:nth-child(7):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 7s;
+}
+.chat-thread > *:nth-child(7) p,
+.chat-thread > * > .message:nth-child(7) p {
+  margin: 0;
+  animation: 9.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(7) .typing-indicator,
+.chat-thread > * > .message:nth-child(7) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 9s forwards;
+}
+.chat-thread > *:nth-child(7) .typing-indicator span,
+.chat-thread > * > .message:nth-child(7) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(7) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(7) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(7) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(7) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(7) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(7) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(8).message-reply + .message,
+.chat-thread > * > .message:nth-child(8).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(8):not(.message-reply),
+.chat-thread > * > .message:nth-child(8):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 8s;
+}
+.chat-thread > *:nth-child(8) p,
+.chat-thread > * > .message:nth-child(8) p {
+  margin: 0;
+  animation: 10.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(8) .typing-indicator,
+.chat-thread > * > .message:nth-child(8) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 10s forwards;
+}
+.chat-thread > *:nth-child(8) .typing-indicator span,
+.chat-thread > * > .message:nth-child(8) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(8) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(8) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(8) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(8) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(8) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(8) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(9).message-reply + .message,
+.chat-thread > * > .message:nth-child(9).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(9):not(.message-reply),
+.chat-thread > * > .message:nth-child(9):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 9s;
+}
+.chat-thread > *:nth-child(9) p,
+.chat-thread > * > .message:nth-child(9) p {
+  margin: 0;
+  animation: 11.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(9) .typing-indicator,
+.chat-thread > * > .message:nth-child(9) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 11s forwards;
+}
+.chat-thread > *:nth-child(9) .typing-indicator span,
+.chat-thread > * > .message:nth-child(9) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(9) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(9) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(9) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(9) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(9) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(9) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+.chat-thread > *:nth-child(10).message-reply + .message,
+.chat-thread > * > .message:nth-child(10).message-reply + .message {
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+.chat-thread > *:nth-child(10):not(.message-reply),
+.chat-thread > * > .message:nth-child(10):not(.message-reply) {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 10s;
+}
+.chat-thread > *:nth-child(10) p,
+.chat-thread > * > .message:nth-child(10) p {
+  margin: 0;
+  animation: 12.01s appear 0s forwards;
+}
+.chat-thread > *:nth-child(10) .typing-indicator,
+.chat-thread > * > .message:nth-child(10) .typing-indicator {
+  will-change: transform;
+  display: flex;
+  animation: 0s disappear 12s forwards;
+}
+.chat-thread > *:nth-child(10) .typing-indicator span,
+.chat-thread > * > .message:nth-child(10) .typing-indicator span {
+  height: 10px;
+  width: 10px;
+  float: left;
+  margin: 0 1px;
+  background-color: #9E9EA1;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.chat-thread > *:nth-child(10) .typing-indicator span:nth-of-type(1),
+.chat-thread > * > .message:nth-child(10) .typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.chat-thread > *:nth-child(10) .typing-indicator span:nth-of-type(2),
+.chat-thread > * > .message:nth-child(10) .typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.chat-thread > *:nth-child(10) .typing-indicator span:nth-of-type(3),
+.chat-thread > * > .message:nth-child(10) .typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+
+.message {
+  display: flex;
+  margin: 1rem 0;
+  width: 100%;
+}
+.message::after {
+  content: "";
+  position: absolute;
+  left: 75px;
+  border-left: 25px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 25px solid #ECF0F1;
+}
+.message + .message {
+  margin-top: 0;
+}
+.message .avatar {
+  width: 75px;
+  height: 75px;
+  background: url("http://lorempixel.com/75/75");
+  margin-right: 20px;
+  border-radius: 50%;
+}
+.message .message-content {
+  display: flex;
+  align-items: center;
+  padding: 0.75em 1.5em;
+  background: #ECF0F1;
+  border-radius: 20px;
+}
+.message.message-reply {
+  justify-content: flex-end;
+}
+.message.message-reply .avatar {
+  margin: 0 0 0 20px;
+}
+.message.message-reply .message-content {
+  float: right;
+  background-color: #0076FF;
+  color: #fff;
+}
+.message.message-reply .message-content p:before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #0076FF;
+}
+
+.chat-actions {
+  text-align: center;
+  align-items: center;
+}
+.chat-actions button {
+  margin-top: 1rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  99% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    opacity: 1;
+    width: auto;
+    height: auto;
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.container {
+  display: flex;
+  height: calc(100vh);
+  align-items: center;
+  justify-content: center;
+}
+.container .card {
+  width: calc(50vw);
+}

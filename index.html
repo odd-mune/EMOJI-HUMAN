@@ -2,26 +2,94 @@
 <html lang="ko">
 
 <head>
+  <meta charset="UTF-8">
     <title>EMOJI-HUMAN</title>
     <link rel="stylesheet" href="https://odd-mune.github.io/EMOJI-HUMAN/index.css">
     <link rel="icon" type="image/x-icon" href="https://odd-mune.github.io/EMOJI-HUMAN/src/rainbow_1f308.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 </head>
 
-<body>
-   
-    <!-- partial:index.partial.html -->
+<body style="margin: 0 auto">
+
+    <!-- 큰 묶음은 배경임 -->
     <div id="gradient-bg">
+
+        <!-- 내비게이션 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"><!--bootstrap-->
+        <!--css link-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--for icons-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--jquery script-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!--bootstrap script-->
+
+        <body id="page-top">
+        <!--creating a navigation bar-->
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top navbar-custom"><!--navigation bar with default view fixed on top specific class nav-bar custom-->
+        <div class="container"><!--gives padding of 16px on LHS and RHS-->
+        <div class="navbar-header page-scroll"><!--navigation bar header having proprty to scroll -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span></span> Menu <i class="fa fa-bars"></i>
+                        </button>
+                    </div><!--end of button-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!--to collapse-->
+            <ul class="nav navbar-nav">
+            <li><a href="https://odd-mune.github.io/EMOJI-HUMAN/index.html">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right page-scroll"><!--second UL to go to right having proprty to scroll page-->
+                <li> <a href="https://odd-mune.github.io/EMOJI-HUMAN/About Us/About Us.html">About Us</a></li>
+                <li><a href="https://odd-mune.github.io/EMOJI-HUMAN/EMOJI-HUMAN/EMOJI-HUMAN.html">EMOJI-HUMAN</a></li>
+                <li><a href="https://odd-mune.github.io/EMOJI-HUMAN/EMO-TI/EMO-TI.html">EMO-TI</a></li>
+                <li><a href="https://odd-mune.github.io/EMOJI-HUMAN/EMO-SSAGE/EMO-SSAGE.html">EMO-SSAGE</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+        <!-- 내비게이션 -->
+          
+
+        <!-- 이모지 얼굴 -->
+        <div style="width: 100%; display: flex; justify-content: space-around; margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); z-index: 2;">
+            <ul id="emoji">
+                <li class="layer" data-depth="0.2">
+                <div class="face"></div>
+                </li>
+                <li class="layer" data-depth="0.3">
+                <div class="shine"></div>
+                </li>
+                <li class="layer" data-depth="0.8">
+                <div class="eye left"></div>
+                </li>
+                <li class="layer" data-depth="0.8">
+                <div class="eye right"></div>
+                </li>
+                <li class="layer" data-depth="0.8">
+                <div class="mouth"></div>
+                </li>
+            </ul>
+        
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js'></script><script  src="https://odd-mune.github.io/EMOJI-HUMAN/face.js"></script>
+        </div>
+        <!-- 이모지 얼굴 -->
+
+        <!-- 이모지 레인 -->
+        <div style="z-index: 1;">
+            <link href="https://fonts.googleapis.com/css?family=Oswald:600,700" rel="stylesheet"> 
+            <div id="all">
+            <div id="container">
+            <div id="animate">
+            </div>
+            </div>
+            </div>
+            
+            <div id="footer" style="">
+                <p>W e l c o m e &nbsp;&nbsp;t o &nbsp;&nbsp;E M O J I &nbsp;&nbsp;H U M A N &nbsp;&nbsp;W o r l d</p>
+            </div>
+
+            <script  src="./script.js"></script>
+        </div>
+        <!-- 이모지 레인 -->
+               
     </div>
-    <!-- partial -->
-    <script  src="https://odd-mune.github.io/EMOJI-HUMAN/index.js"></script>
+    <script src="https://odd-mune.github.io/EMOJI-HUMAN/index.js"></script>
+    <!-- 큰 묶음은 배경임 -->
 
-    <button id="button1" onclick="document.location='https://odd-mune.github.io/EMOJI-HUMAN/About Us/About Us.html'">About Us</button>
-    <button id="button2" onclick="document.location='https://odd-mune.github.io/EMOJI-HUMAN/EMOJI-HUMAN/EMOJI-HUMAN.html'">EMOJI-HUMAN</button>
-    <button id="button3" onclick="document.location='https://odd-mune.github.io/EMOJI-HUMAN/EMO-TI/EMO-TI.html'">EMO-TI</button>
-    <button id="button4" onclick="document.location='https://odd-mune.github.io/EMOJI-HUMAN/EMO-SSAGE/EMO-SSAGE.html'">EMO-SSAGE</button>
-
-    <br />
-    <hr />
-
-    
 </body>
