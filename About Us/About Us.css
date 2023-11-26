@@ -2,7 +2,7 @@
 /*---------scroll snap 부분---------*/
 body {
     overflow: hidden;
-    font-family: 'Roboto Slab', serif;
+    font-family: Noto Sans KR, Bold;
 }
 /* Scroll down */
 #container{
@@ -82,7 +82,7 @@ body {
 
 
 /*---------요소들 부분---------*/
-  @import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+  @import url("/external/cardo_rubik");
   :root {
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -117,7 +117,7 @@ body {
   }
   @media (min-width: 800px) {
     .page-content {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -191,14 +191,14 @@ body {
   }
 
   .title {
-    font-size: 1.3rem;
+    font-size: 30px;
     font-weight: bold;
-    line-height: 1.2;
+    font-family: Noto Sans KR;
   }
 
   .copy {
     font-family: var(--font-serif);
-    font-size: 1.125rem;
+    font-size: 15px;
     font-style: italic;
     line-height: 1.35;
   }
@@ -210,7 +210,7 @@ body {
     }
 
     .content {
-      transform: translateY(calc(100% - 4.5rem));
+      transform: translateY(calc(100% - 10rem));
     }
     .content > *:not(.title) {
       opacity: 0;
@@ -253,7 +253,7 @@ body {
 
 
 /* text fade in */
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900,500,600,700);
+@import url(/external/raleway);
 
 .animated{
   -webkit-animation-fill-mode:both;
@@ -322,6 +322,7 @@ body {
   color: rgb(0, 0, 0);
   font-family: Noto Sans KR;
   text-align: center;
+  line-height: 15px;
 }
 #p4{
   font-size: 15px;

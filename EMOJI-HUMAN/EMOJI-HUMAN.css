@@ -14,12 +14,12 @@ p
 a,
 a:hover,
 a:focus,
-a:active,{
+a:active {
 	color: #99CED4;/*hover-highlight over,active-highlisht when clicked,focus-highlight when under use*/
 	outline: none; /*gives outline to an element*/
 }
 h2,
-h3,
+h3
 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -153,3 +153,323 @@ footer .footer-below {
 }
 /* 내비 */
 
+
+
+
+/* 배경 스크롤 */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+section::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 80%;
+  /* background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%); */
+  /* background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.8) 80%,rgba(0,0,0,.8) 100%); */
+}
+
+
+
+
+/* 글자 */
+#p1 {
+  top: 38%;
+  left: 50%;
+  z-index: 2;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  font-family: Noto Sans KR;
+  text-align: center;
+  line-height: 50px;
+}
+#p2{
+  top: 48%;
+  left: 50%;
+  z-index: 2;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  font-family: Noto Sans KR;
+  text-align: center;
+}
+#p3{
+  top: 54%;
+  left: 50%;
+  z-index: 2;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-family: Noto Sans KR;
+  text-align: center;
+  line-height: 23px;
+}
+#p4{
+  top: 54%;
+  left: 50%;
+  z-index: 2;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-family: Noto Sans KR;
+  text-align: center;
+  line-height: 15px;
+}
+/* 
+section h1 {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font : 500px;
+  font-family: Noto Sans KR;
+  text-align: center;
+  white-space: nowrap;
+}
+section h2 {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 23px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+}
+section h3 {
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font : normal 300 13px/1 'Josefin Sans', sans-serif;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 16px;
+} */
+
+/* 스크롤 글자 */
+.demo a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: rgb(255, 255, 255);
+  font : normal 400 15px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  /* transition: opacity .3s; */
+}
+.demo a:hover {
+  opacity: .5;
+}
+
+
+
+#section01 a {
+  padding-top: 40px;
+}
+#section01 a span {
+  position: absolute; 
+  top: 0;
+  /* left: 50%; */
+  width: 24px;
+  height: 24px;
+  /* margin-left: -12px; */
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+/* 메세지 버블 */
+/* body {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: normal;
+} */
+/* 
+section {
+  max-width: 450px;
+  margin: 50px auto;
+} */
+section div {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.clear {
+  clear: both;
+}
+
+.from-me {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  background: #0B93F6;
+  border-radius: 25px;
+  float: right;
+  right: 400px;
+}
+.from-me:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -2px;
+  right: -7px;
+  height: 20px;
+  border-right: 20px solid #0B93F6;
+  border-bottom-left-radius: 16px 14px;
+  -webkit-transform: translate(0, -2px);
+}
+.from-me:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -2px;
+  right: -56px;
+  width: 26px;
+  height: 20px;
+  background: white;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+}
+
+.from-them {
+  position: relative;
+  padding: 10px 20px;
+  background: #E5E5EA;
+  border-radius: 25px;
+  color: black;
+  float: left;
+  left: 400px;
+}
+.from-them:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  left: -7px;
+  height: 20px;
+  border-left: 20px solid #E5E5EA;
+  border-bottom-right-radius: 16px 14px;
+  -webkit-transform: translate(0, -2px);
+}
+.from-them:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: -2px;
+  left: 4px;
+  width: 26px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+}
+/* 메세지 버블 */
+
+
+
+
+/* text fade in */
+@import url(/external/raleway);
+
+.animated{
+  -webkit-animation-fill-mode:both;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+}
+.animated2{
+  animation-delay:.5s;
+  -webkit-animation-delay:.5s;
+  -webkit-animation-fill-mode:both;
+  -webkit-animation-duration:2s;
+  animation-duration:2s;
+}
+@-webkit-keyframes fadeOutUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(1);
+    -webkit-transform: translateY(40px);
+	}	100% {
+		opacity: 1;
+	}
+}
+
+.fadeOutUp {
+	-webkit-animation-name: fadeOutUp;
+	animation-name: fadeOutUp;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeIn {
+	0%{
+    opacity: 0;
+		-webkit-transform: translateY(1);
+    -webkit-transform: translateY(40px);
+  }
+  100% {
+		opacity: 1;
+	}
+}
+/* text fade in */
+
+
+
+
+/* 그라디언트 배경 */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100vw;
+    height: 200vh;
+    padding: 1rem;
+    font-family: Avenir, sans-serif;
+    font-size: 112.5%;
+    color: #124;
+    background-image: radial-gradient(rgba(255, 185, 65, 0.7), rgba(255, 0, 0, 0) 40vw), radial-gradient(rgba(255, 186, 186, 0.7), rgba(0, 128, 0, 0) 40vw), radial-gradient(rgba(114, 215, 52, 0.7), rgba(0, 0, 255, 0) 40vw), radial-gradient(rgba(255, 255, 0, 0.7), rgba(255, 255, 0, 0) 40vw), radial-gradient(rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0) 40vw);
+    background-position: -30vw -30rem, 50% -20rem, 60vw -15rem, -10vw calc(-35rem + 20vw), 30vw calc(-40rem + 20vw);
+    background-size: 80vw 80vw;
+    background-repeat: no-repeat;
+  }
+/* 그라디언트 배경 */
+
+div p {
+  margin: 0 0 0px;
+}

@@ -18,6 +18,7 @@ const audios = [
   document.getElementById("enfj_audio"),
 ];
 const numMbtis = 16;
+const slidesPerView = 5;
 
 /* ========
 Debugger plugin, simple demo plugin to console.log some of callbacks
@@ -48,9 +49,9 @@ function myPlugin({ swiper, extendParams, on }) {
     console.log('sliderMove');
   });
   on('slideChange', () => {
-    audios[(swiper.previousIndex + numMbtis - 5) % numMbtis].pause();
-    audios[(swiper.previousIndex + numMbtis - 5) % numMbtis].currentTime = 0;
-    audios[(swiper.activeIndex + numMbtis - 5) % numMbtis].play();
+    audios[(swiper.previousIndex + numMbtis - slidesPerView) % numMbtis].pause();
+    audios[(swiper.previousIndex + numMbtis - slidesPerView) % numMbtis].currentTime = 0;
+    audios[(swiper.activeIndex + numMbtis - slidesPerView) % numMbtis].play();
     if (!swiper.params.debugger) return;
     console.log('slideChange', swiper.previousIndex, '->', swiper.activeIndex);
   });
@@ -92,7 +93,7 @@ Swiper.use([myPlugin]);
 let swiper = new Swiper('.swiper-container', {
   loop: true,
   centeredSlides: true,
-  slidesPerView: '5',
+  slidesPerView: slidesPerView,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
