@@ -44,9 +44,21 @@ function myPlugin({ swiper, extendParams, on }) {
     if (!swiper.params.debugger) return;
     console.log('doubleTap');
   });
+  on('loopFix', (swiper, e) => {
+    if (!swiper.params.debugger) return;
+    console.log('loopFix');
+  });
   on('sliderMove', (swiper, e) => {
     if (!swiper.params.debugger) return;
     console.log('sliderMove');
+  });
+  on('activeIndexChange', () => {
+    if (!swiper.params.debugger) return;
+    console.log('activeIndexChange: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
+  });
+  on('realIndexChange', () => {
+    if (!swiper.params.debugger) return;
+    console.log('realIndexChange: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
   on('slideNextTransitionEnd', () => {
     audios[(swiper.realIndex - 1 + numMbtis - slidesPerView) % numMbtis].pause();
@@ -54,7 +66,7 @@ function myPlugin({ swiper, extendParams, on }) {
     audios[(swiper.realIndex + numMbtis - slidesPerView) % numMbtis].volume = 0.25;
     audios[(swiper.realIndex + numMbtis - slidesPerView) % numMbtis].play();
     if (!swiper.params.debugger) return;
-    console.log('slideChange', swiper.previousIndex, '->', swiper.activeIndex);
+    console.log('slideNextTransitionEnd: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
   on('slidePrevTransitionEnd', () => {
     audios[(swiper.realIndex + 1 + numMbtis - slidesPerView) % numMbtis].pause();
@@ -62,7 +74,7 @@ function myPlugin({ swiper, extendParams, on }) {
     audios[(swiper.realIndex + numMbtis - slidesPerView) % numMbtis].volume = 0.25;
     audios[(swiper.realIndex + numMbtis - slidesPerView) % numMbtis].play();
     if (!swiper.params.debugger) return;
-    console.log('slideChange', swiper.previousIndex, '->', swiper.activeIndex);
+    console.log('slidePrevTransitionEnd: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
   on('slideChangeTransitionStart', () => {
     if (!swiper.params.debugger) return;
