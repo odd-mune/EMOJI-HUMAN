@@ -1,14 +1,14 @@
+/*-----------배경 그라디언트-----------*/
 #gradient-bg{
     width: 100%;
     height: 100vh;
     background: rgb(255, 255, 255);
     background-image: 
-    radial-gradient(circle at top left, rgb(236, 183, 16) 0%, rgba(225, 243, 97,0) 80%),
+    radial-gradient(circle at top left, rgb(236, 183, 16) 0%, rgba(243, 97, 155, 0) 80%),
     radial-gradient(circle at bottom right, rgb(114, 215, 52) 0%, rgba(204, 104, 119, 0) 40%),
     radial-gradient(circle farthest-corner at top right, rgb(255, 255, 255) 0%, rgba(155, 221, 240,0) 50%),
     radial-gradient(ellipse at bottom center, rgb(232, 186, 186) 0%, rgba(254, 43, 0, 0) 100%);
     animation: colorChange 6s infinite alternate-reverse;
-    
 }
 
 @keyframes colorChange {
@@ -114,3 +114,389 @@
  1% { background-image: radial-gradient(circle at top left, rgb(236, 183, 16) 0%, rgba(225, 243, 97,0) 50.5%),radial-gradient(circle at bottom right, rgb(114, 215, 52) 0%, rgba(204, 104, 119, 0) 50.5%),radial-gradient(circle at top right, rgb(255, 255, 255) 0%, rgba(155, 221, 240,0) 50.5%),radial-gradient(ellipse at bottom center, rgb(232, 186, 186) 0%, rgba(254, 43, 0, 0) 50.5%);}
  0% { background-image: radial-gradient(circle at top left, rgb(236, 183, 16) 0%, rgba(225, 243, 97,0) 50%),radial-gradient(circle at bottom right, rgb(114, 215, 52) 0%, rgba(204, 104, 119, 0) 50%),radial-gradient(circle at top right, rgb(255, 255, 255) 0%, rgba(155, 221, 240,0) 50%),radial-gradient(ellipse at bottom center, rgb(232, 186, 186) 0%, rgba(254, 43, 0, 0) 50%);}
 }
+/*-----------배경 그라디언트-----------*/
+
+:root {
+  --FACE_WIDTH: 450px;
+  --FACE_HEIGHT: 450px;
+  --SHINE_WIDTH: calc(calc(194/230) * var(--FACE_WIDTH));
+  --SHINE_HEIGHT: calc(calc(206/230) * var(--FACE_HEIGHT));
+  --EYE_WIDTH: calc(calc(24/230) * var(--FACE_WIDTH));
+  --EYE_HEIGHT: calc(calc(38/230) * var(--FACE_HEIGHT));
+  --EYE_LEFT_RIGHT: calc(calc(70/230) * var(--FACE_WIDTH));
+  --EYE_LEFT_BOTTOM: calc(calc(40/230) * var(--FACE_HEIGHT));
+  --EYE_RIGHT_BOTTOM: calc(calc(40/230) * var(--FACE_HEIGHT));
+  --EYE_RIGHT_LEFT: calc(calc(70/230) * var(--FACE_WIDTH));
+  --MOUTH_TOP: calc(calc(88/230) * var(--FACE_HEIGHT));
+  --MOUTH_WIDTH: calc(calc(94/230) * var(--FACE_WIDTH));
+  --MOUTH_HEIGHT: calc(calc(48/230) * var(--FACE_HEIGHT));
+  --MOUTH_BEFORE_BOTTOM: calc(calc(10/230) * var(--FACE_HEIGHT));
+  --MOUTH_AFTER_BOTTOM: calc(calc(26/230) * var(--FACE_HEIGHT));
+}
+
+/* 이모지 얼굴 */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  #emoji {
+    position: relative;
+    width: var(--FACE_WIDTH);
+    height: var(--FACE_HEIGHT);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .face {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: var(--FACE_WIDTH);
+    height: var(--FACE_HEIGHT);
+    background-color: #FECA32;
+    border-radius: 100%;
+    box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 30px;
+  }
+  
+  .shine {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: var(--SHINE_WIDTH);
+    height: var(--SHINE_HEIGHT);
+    background: linear-gradient(to bottom, #FFFFFF, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+    border-radius: 100%;
+    opacity: 0.8;
+  }
+  
+  .eye {
+    width: var(--EYE_WIDTH);
+    height: var(--EYE_HEIGHT);
+    background-color: #A1620F;
+    border-radius: 100%;
+    box-shadow: inset rgba(0, 0, 0, 0.5) 0 6px 12px, rgba(255, 255, 255, 0.2) 0 2px 0 2px;
+    -webkit-animation: blink 5s infinite;
+            animation: blink 5s infinite;
+  }
+  .eye.left {
+    position: absolute;
+    top: 0;
+    right: var(--EYE_LEFT_RIGHT); 
+    bottom: var(--EYE_LEFT_BOTTOM); 
+    left: 0;
+    margin: auto;
+  }
+  .eye.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: var(--EYE_RIGHT_BOTTOM); 
+    left: var(--EYE_RIGHT_LEFT); 
+    margin: auto;
+  }
+  
+  .mouth {
+    position: absolute;
+    top: var(--MOUTH_TOP); 
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    width: var(--MOUTH_WIDTH); 
+    height: var(--MOUTH_HEIGHT); 
+    transform: translate3d(0, 0, 0);
+  }
+  .mouth:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: var(--MOUTH_BEFORE_BOTTOM); 
+    left: 0;
+    margin: auto;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #6E440B;
+    border-radius: 100%;
+    box-shadow: rgba(255, 255, 255, 0.25) 0 3px 0;
+    transform: scale(1);
+  }
+  .mouth:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: var(--MOUTH_AFTER_BOTTOM);
+    left: 0;
+    margin: auto;
+    content: "";
+    width: calc(100% - 20px);
+    height: 100%;
+    background-color: #FECA32;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 4px 4px -4px;
+    transform-origin: 50% 100%;
+    transform: scale(1.6);
+  }
+  
+  @-webkit-keyframes blink {
+    0%, 96% {
+      transform: scaleY(1);
+    }
+    98% {
+      transform: scaleY(0.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes blink {
+    0%, 96% {
+      transform: scaleY(1);
+    }
+    98% {
+      transform: scaleY(0.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  /* 이모지 얼굴 */
+
+/* 내비 */
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+.center
+{
+	text-align: center;
+}
+p
+{
+	font-size: 20px;
+}
+a,
+a:hover,
+a:focus,
+a:active,{
+	color: #99CED4;/*hover-highlight over,active-highlisht when clicked,focus-highlight when under use*/
+	outline: none; /*gives outline to an element*/
+}
+h2,
+h3,
+{
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+}
+hr.star-light,
+hr.star-primary {
+  padding: 0;  /*no padding,bordor upper 5px text to be avilable in center mac-width of 250 having margin t25  rauto b30 */
+  border: none;
+  border-top: solid 5px;
+  text-align: center;
+  max-width: 250px;
+  margin: 25px auto 30px;
+}
+hr.star-light:after,
+hr.star-primary:after {
+  content: "\f021";     /*give an icon FontAwesome helps to get desired font display inline within full span position*/
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  top: -0.8em;
+  font-size: 2em;
+  padding: 0 0.25em;
+}
+hr.star-light {
+  border-color: white; /*gives border white*/
+}
+hr.star-light:after {
+  background-color: #18BC9C;
+  color: white;
+}
+hr.star-primary {
+  border-color: #2C3E50;
+}
+hr.star-primary:after {
+  background-color: white;
+  color: #2C3E50;
+}
+header {
+  text-align: center;
+  background: #18BC9C;
+  color: white;
+}
+header .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+header .intro .name {
+  display: block;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+}
+header .intro .skills {
+  font-size: 1.25em;
+  font-weight: 300;/*how much bold*/
+}
+@media (min-width: 768px) {/* if minimum width exceeds then perform*/
+  header .container {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
+  header .intro .name {
+    font-size: 4.75em;
+  }
+  header .intro .skills {
+    font-size: 1.75em;
+  }
+}
+.navbar-custom {
+  background: #2C3E50;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+}
+}
+.navbar-custom .navbar-nav {
+  letter-spacing: 1px;
+}
+.navbar-custom .navbar-nav li a {
+  color: white;
+}
+.navbar-custom .navbar-nav li a:hover {
+  color: #18BC9C;
+  outline: none;
+}
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active {
+  color: white;
+}
+.navbar-custom .navbar-nav li.active a {
+  color: white;
+  background: #18BC9C;
+}
+.navbar-custom .navbar-nav li.active a:hover,
+.navbar-custom .navbar-nav li.active a:focus,
+.navbar-custom .navbar-nav li.active a:active {
+  color: white;
+  background: #18BC9C;
+}
+.navbar-custom .navbar-toggle {
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  border-color: white;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #18BC9C;
+  color: white;
+  border-color: #18BC9C;
+}
+footer {
+  color: white;
+}
+footer h3 {
+  margin-bottom: 30px;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+footer .footer-col {
+  margin-bottom: 50px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+}
+/* 내비 */
+
+
+
+
+/* 이모지 레인 */
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  font-family: 'Oswald', sans-serif;
+}
+
+#text {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#container {
+  left: 0px;
+  top: -100px;
+  height: calc(100vh + 100px);
+  overflow: hidden;
+  position: relative;
+}
+
+#animate{
+  margin: 0 auto;
+  width: 20px;
+  overflow: visible;
+  position: relative;
+}
+
+#all{
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+}
+
+#footer{
+  color: #ffc0cb;
+  text-decoration: none;
+  position: fixed;
+  width: 752px;
+  bottom: 20px;
+  align-content: center;
+  float: none;
+  margin-left: calc(50% - 376px);
+}
+
+#a, p{
+  text-decoration: none;
+  color: #FFFFFF;
+  letter-spacing: 6px;
+  transition: all 0.5s ease-in-out;
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+/* 이모지 레인 */

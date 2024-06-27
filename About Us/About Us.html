@@ -1,141 +1,213 @@
 <!doctype html>
 <html>
-    <head>
-        <title>EMOJI-HUMAN</title>
-        <link rel="stylesheet" href="https://odd-mune.github.io/EMOJI-HUMAN/About Us/About Us.css">
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <title>EMOJI-HUMAN</title>
+    <link rel="stylesheet" href="/About Us/About Us.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/external/reset.min.css">
+
+    <!-- 손흔들 -->
+    <link rel="stylesheet" href="/external/ajax/normalize.min.css">
+
+</head>
 
 
-    <body>
+
+<body>
+
+    <!-- 내비게이션 -->
+    <link rel="stylesheet" href="/external/bootstrap.min.css"><!--bootstrap-->
+    <!--css link-->
+    <link rel="stylesheet" href="/external/font-awesome.min.css">
+    <!--for icons-->
+    <script src="/external/ajax/jquery.min.js"></script><!--jquery script-->
+    <script src="/external/bootstrap/bootstrap.min.js"></script><!--bootstrap script-->
+
+    <body id="page-top">
+        <!--creating a navigation bar-->
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+            <!--navigation bar with default view fixed on top specific class nav-bar custom-->
+            <div class="container"><!--gives padding of 16px on LHS and RHS-->
+                <div class="navbar-header page-scroll"><!--navigation bar header having proprty to scroll -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                        <span></span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                </div><!--end of button-->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><!--to collapse-->
+                    <ul class="nav navbar-nav">
+                        <li><a href="/index.html">Home</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right page-scroll">
+                        <!--second UL to go to right having proprty to scroll page-->
+                        <li> <a href="/About Us/About Us.html">About Us</a></li>
+                        <li><a href="/EMOJI-HUMAN/EMOJI-HUMAN.html">EMOJI-HUMAN</a></li>
+                        <li><a href="/EMO-TI/EMO-TI.html">EMO-TI</a></li>
+                        <li><a href="/EMO-SSAGE/EMO-SSAGE.html">EMO-SSAGE</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 내비게이션 -->
+
+        <!-- 1페이지 -->
         <div id="container">
-          <div class="list">
-              <div class="one">
-                <p id="p1">Hello, Humans!</p>
-                <p id="p2">안녕하세요, 우리는 팀 이모지 인간입니다.</p>
-                 <br/>
-                <p id="p3">우리는 이모지 인간이 아닙니다.<br/>
-                 진짜 인간이에요!
-                </p>
+            <div class="list">
+                <div class="one">
 
-                <p id="p4">버튼을 눌러 인사해주세요! 😬</p>
-                <button class="mui-button">
-                <div class="ripple"></div>
-                <p id="p5">click me!</p>
-                </button>
-                <!-- partial -->
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="https://odd-mune.github.io/EMOJI-HUMAN/About Us/About Us.js"></script>
-              </div>
-          </div>
-        
-          <div class="list">
-              <div class ="two">
-                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png" style="display: block; margin: 0 auto;">
-                <div class="wrapper">
-                    <ul class="team">
-                        <li class="team-item">
-                            <div class="profile profile_red">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Liam <span>CEO</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_beige">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Coco <span>Mood Maker</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_green">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Olivia <span>Designer</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_pink">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.pngg">
-                                <div class="profile-contents">
-                                    <h2>James <span>Front-end</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_purple">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Ella <span>Back-end</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="wave"><span>👋</span></div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <p id="p1" class="animated fadeOutUp">Hello, Humans!</p>
+                    
+                    <p id="p2" class="animated fadeOutUp">안녕하세요, 우리는 팀 이모지 인간입니다.</p>
+
+                    <br>
+                    
+                    <p id="p3" class="animated2 fadeIn">우리는 이모지 인간이 아닙니다.</p>
+                    <p id="p4" class="animated2 fadeIn">진짜 인간이에요!</p>
+
                 </div>
-              </div>
-          </div>
-          
-          <div class="list">
-              <div class="three">
-                <div class="wrapper">
-                    <ul class="team">
-                        <li class="team-item">
-                            <div class="profile profile_red">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Liam <span>CEO</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
+            </div>
+            <!-- 1페이지 -->
+
+            <!-- 2페이지 -->
+            <div class="list">
+                <div class="two">
+
+                    <div style="float: left; width: 30%;">
+                        <img src="/src/song.png" style="display: block; margin: 0 auto;">
+                    </div>
+
+                    <!-- 요소들 -->
+                    <div style="float: left; width: 70%;">
+                        <main class="page-content">
+                            <!-- 1번칸 -->
+                            <div class="card">
+                                <div class="content">
+                                    <h2 class="title">Me</h2>
+                                    <p class="copy">안녕하세요<br>인간 흠터레스팅 송민겸입니다.<br>
+                                        저는 현재 경희대학교 디지털콘텐츠학과<br> 휴학 중인 (현)백수입니다. ㅋㅋ
+                                        <br>23년 새해를 맞아 갓-생을<br>살기 위해 노력하고 있지만...<br>
+                                        네, 아무튼 열심히 노력하고 있습니다. ^^
+                                        <br>저는 참고로 ENTJ입니다.<br>전국 모든 ENTJ 홧팅~
+                                    </p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_beige">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Coco <span>Mood Maker</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
+                            <!-- 2번칸 -->
+                            <div class="card">
+
+                                <div class="content">
+                                    <h2 class="title">Interest</h2>
+                                    <p class="copy">휴학을 한 후의 제 관심사는<br>해외 여행과 진로 고민입니다.
+                                        <br>놀 수 있을 때 많이 놀러 다니고 싶어서<br>여행으로 탕진을 실천하고 있습니다.
+                                        <br>또 최근에는 UX/UI 디자인과 개발에<br>관심이 생겨서 이런 홈페이지도
+                                        <br>만들게 되었어욤! 이러다가 개발의<br>길을 걷게 되고...
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!-- 3번칸 -->
+                            <div class="card">
+                                <div class="content">
+                                    <h2 class="title">Summary</h2>
+                                    <p class="copy">이번 전시 후기는...정말 발등에 불이 아니라 메테오가 떨어진 수준 ^^;;
+                                        비전공자로 코딩의 ㅋ도 모르는 제가 정말 맨땅에 헤딩 수준으로 개발을 하게 되어서 더 고생했던 것 같습니다.
+                                        첫 개발이라서 아직 많이 미숙하고 고치고 싶은 부분이 많지만, 모두들 재밌게 봐주셨으면 해요! 감사합니다!!
+
+                                    </p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_green">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Olivia <span>Designer</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_pink">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>James <span>Front-end</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="team-item">
-                            <div class="profile profile_purple">
-                                <img src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png">
-                                <div class="profile-contents">
-                                    <h2>Ella <span>Back-end</span></h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                        </main>
+                    </div>
+                    <!-- 요소들 -->
+
                 </div>
-              </div>
-          </div>
-        <div>
+            </div>
+            <!-- 2페이지 -->
+
+            <!-- 3페이지 -->
+            <div class="list">
+                <div class="three">
+
+                    <!-- 요소들 -->
+                    <div style="float: left; width: 70%;">
+                        <main class="page-content" style="justify-content: end;">
+                            <!-- 1번칸 -->
+                            <div class="card">
+                                <div class="content">
+                                    <h2 class="title">Me</h2>
+                                    <p class="copy">안녕하세요,
+                                        한국 살고 있는
+                                        김유진이라고 합니다.
+                                        디지털 콘텐츠에 대해
+                                        공부하면서 다양한
+                                        작업들을 시도중입니다.
+                                        제 개인 작업물이
+                                        보고 싶으시다면,
+                                        옆 계정에 놀러와주세요! </p>
+                                </div>
+                            </div>
+                            <!-- 2번칸 -->
+                            <div class="card">
+                                <div class="content">
+                                    <h2 class="title">Interest</h2>
+                                    <p class="copy">현재 관심 분야는
+                                        3D,
+                                        특수효과,
+                                        UI&UX,
+                                        콘텐츠 기획
+                                        등 다양합니다.
+                                        궁금한 분야들이 많아서
+                                        이들을 각각
+                                        경험하고 공부해보는
+                                        과정에 있습니다.
+                                        (미래에 무슨 일을
+                                        하고 있을지 궁금하네요...)
+                                    </p>
+                                    </div>
+                            </div>
+                            <!-- 3번칸 -->
+                    <div class="card">
+                        <div class="content">
+                            <h2 class="title">Summary</h2>
+                            <p class="copy">그런 의미에서 이번
+                                이모지 인간 프로젝트는
+                                제게 큰 도움이 된
+                                작업이었습니다.
+
+                                색다른 시도와 고민도 많이 했고,
+                                그 과정에서 새롭게 배우게 된
+                                부분들도 많았습니다.
+                                (ex : 개발...)
+
+                                이렇게 탄생한
+                                >>>이모지 인간<<< 재밌게 즐겨주시길 바라요! </p>
+                        </div>
+                        </div>  
+                        </main>
+                    </div>
+                    
+                    <!-- 요소들 -->
+
+                    <div style="float: left; width: 30%;">
+                        <img src="/src/kim.png" style="display: block; margin: 0 auto;">
+                    </div>
+
+                </div>
+            </div>
+            <!-- 3페이지 -->
+
     </body>
+
 </html>
