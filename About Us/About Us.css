@@ -30,7 +30,7 @@ body {
 } */
 
 /* .list:nth-child(1){
-  background-image: url("/src/background-01.png");
+  background-image: url("https://odd-mune.github.io/EMOJI-HUMAN/src/background-01.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed; 
@@ -82,7 +82,7 @@ body {
 
 
 /*---------요소들 부분---------*/
-  @import url("/external/cardo_rubik");
+  @import url("https://odd-mune.github.io/EMOJI-HUMAN/external/cardo_rubik");
   :root {
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -164,16 +164,16 @@ body {
     transition: transform calc(var(--d) * 2) var(--e);
   }
   .card:nth-child(1):before {
-    background-image: src="/src/song.png";
+    background-image: src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png";
   }
   .card:nth-child(2):before {
-    background-image: src="/src/song.png";
+    background-image: src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png";
   }
   .card:nth-child(3):before {
-    background-image: src="/src/song.png";
+    background-image: src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png";
   }
   .card:nth-child(4):before {
-    background-image: src="/src/song.png";
+    background-image: src="https://odd-mune.github.io/EMOJI-HUMAN/src/song.png";
   }
 
   .content {
