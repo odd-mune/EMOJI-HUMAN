@@ -29,8 +29,8 @@ function myPlugin({ swiper, extendParams, on }) {
   });
 
   on('init', () => {
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].volume = 0.25;
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].play();
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].volume = 0.25;
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].play();
     if (!swiper.params.debugger) return;
     console.log('init');
   });
@@ -63,18 +63,18 @@ function myPlugin({ swiper, extendParams, on }) {
     console.log('realIndexChange: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
   on('slideNextTransitionEnd', () => {
-    audios[(swiper.realIndex - 1 + numMbtis + 3) % numMbtis].pause();
-    audios[(swiper.realIndex - 1 + numMbtis + 3) % numMbtis].currentTime = 0;
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].volume = 0.25;
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].play();
+    audios[(swiper.realIndex - 1 + numMbtis + 2) % numMbtis].pause();
+    audios[(swiper.realIndex - 1 + numMbtis + 2) % numMbtis].currentTime = 0;
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].volume = 0.25;
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].play();
     if (!swiper.params.debugger) return;
     console.log('slideNextTransitionEnd: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
   on('slidePrevTransitionEnd', () => {
-    audios[(swiper.realIndex + 1 + numMbtis + 3) % numMbtis].pause();
-    audios[(swiper.realIndex + 1 + numMbtis + 3) % numMbtis].currentTime = 0;
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].volume = 0.25;
-    audios[(swiper.realIndex + numMbtis + 3) % numMbtis].play();
+    audios[(swiper.realIndex + 1 + numMbtis + 2) % numMbtis].pause();
+    audios[(swiper.realIndex + 1 + numMbtis + 2) % numMbtis].currentTime = 0;
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].volume = 0.25;
+    audios[(swiper.realIndex + numMbtis + 2) % numMbtis].play();
     if (!swiper.params.debugger) return;
     console.log('slidePrevTransitionEnd: realIndex: ', swiper.realIndex, ' active: ', swiper.activeIndex, ' previous: ', swiper.previousIndex);
   });
