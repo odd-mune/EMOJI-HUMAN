@@ -51,6 +51,7 @@ function myPlugin({ swiper, extendParams, on }) {
   on('slideChange', () => {
     audios[(swiper.previousIndex + numMbtis - slidesPerView) % numMbtis].pause();
     audios[(swiper.previousIndex + numMbtis - slidesPerView) % numMbtis].currentTime = 0;
+    audios[(swiper.activeIndex + numMbtis - slidesPerView) % numMbtis].volume = 0.25;
     audios[(swiper.activeIndex + numMbtis - slidesPerView) % numMbtis].play();
     if (!swiper.params.debugger) return;
     console.log('slideChange', swiper.previousIndex, '->', swiper.activeIndex);
